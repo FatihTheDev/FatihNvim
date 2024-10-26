@@ -41,10 +41,15 @@ rename %LOCALAPPDATA%\nvim-data nvim-data.bak
 ```
 2. Clone the repository
 ```bash
-# Linux/macOS
+# Linux/macOS:
+# remove .git so you can use your own git connection later
+rm -rf ~/.config/nvim/.git
 git clone https://github.com/FatihTheDev/FatihNvim.git ~/.config/nvim
 
-# Windows
+# Windows:
+(remove .git so you can use your own git connection later
+Remove-Item $env:LOCALAPPDATA\nvim\.git -Recurse -Force
+# Clone the repo
 git clone https://github.com/FatihTheDev/FatihNvim.git %LOCALAPPDATA%\nvim
 ```
 3. Start Neovim

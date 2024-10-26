@@ -126,4 +126,4 @@ Most colorschemes are managed through lazy.nvim. However, if you want to use the
 - Use ```<leader>ff``` for file finding
 - Use 's' in normal mode to trigger flash.nvim
 - Access live server features using commands :LiveServerStart and :LiveServerStop
-- Switch themes using :Colorscheme <theme_name>
+- Switch themes using :colorscheme <theme_name>

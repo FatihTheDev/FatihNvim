@@ -41,9 +41,10 @@ rename %LOCALAPPDATA%\nvim-data nvim-data.bak
 ```
 2. Clone the repository
 ```bash
-# Linux/macOS:
+# Linux/MacOS:
 # remove .git so you can use your own git connection later
 rm -rf ~/.config/nvim/.git
+# Clone the repo
 git clone https://github.com/FatihTheDev/FatihNvim.git ~/.config/nvim
 
 # Windows:

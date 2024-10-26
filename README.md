@@ -123,7 +123,8 @@ Most colorschemes are managed through lazy.nvim. However, if you want to use the
 - eldrich.nvim
 
 ## 📝 Usage:
-- Use ```<leader>ff``` for file finding
-- Use 's' in normal mode to trigger flash.nvim
-- Access live server features using commands :LiveServerStart and :LiveServerStop
-- Switch themes using :colorscheme <theme_name>
+- Use ```<leader>ff``` or ```ctrl + f``` for file finding
+- Use ```ctrl + t``` or ``ctrl + alt + t`` for opening a terminal window
+- Use '``s`` in normal mode to trigger flash.nvim
+- Access live server features using commands ```:LiveServerStart``` and ```:LiveServerStop``` in command mode
+- Switch themes using ```:colorscheme <theme_name>``` in command mode

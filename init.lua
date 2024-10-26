@@ -53,7 +53,7 @@ vim.call('plug#end')
 
 -- Colorschemes Usage
 
-vim.cmd[[colorscheme tokyonight-moon]]
+vim.cmd[[colorscheme tokyonight-night]]
 
 -- vim.cmd[[colorscheme eldritch]]
 

@@ -5,6 +5,7 @@ This is my personalized fork of [AstroNvim](https://astronvim.com/), enhanced wi
 ## ✨ Added Features
 
 - **Enhanced Motion**: [flash.nvim](https://github.com/folke/flash.nvim) for quick navigation
+- **Multi-Cursor Support**: [multiple-cursors.nvim](https://github.com/brenton-leighton/multiple-cursors.nvim)
 - **Development Tools**: [live-server.nvim](https://github.com/aurum77/live-server.nvim) for real-time preview
 - **Additional Themes & Plugins**:
   - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim) - A clean, dark Neovim theme

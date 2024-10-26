@@ -10,7 +10,16 @@ return {
     -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
       ensure_installed = {
+        "emmet_language_server",
         "lua_ls",
+        "html",
+        "cssls",
+        "tailwindcss",
+        "ts_ls",
+        "clangd",
+        "pylsp",
+        "markdown_oxide",
+        "sqlls",
         -- add more arguments for adding more language servers
       },
     },
@@ -22,6 +31,8 @@ return {
     opts = {
       ensure_installed = {
         "stylua",
+        "eslint_d",
+        "ast_grep"
         -- add more arguments for adding more null-ls sources
       },
     },
@@ -31,6 +42,8 @@ return {
     -- overrides `require("mason-nvim-dap").setup(...)`
     opts = {
       ensure_installed = {
+        "js-debug-adapter",
+        "chrome-debug-adapter",
         "python",
         -- add more arguments for adding more debuggers
       },

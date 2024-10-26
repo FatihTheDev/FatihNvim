@@ -5,6 +5,7 @@ This is my personalized fork of [AstroNvim](https://astronvim.com/), enhanced wi
 ## ✨ Added Features
 
 - **Enhanced Motion**: [flash.nvim](https://github.com/folke/flash.nvim) for quick navigation
+- **Multi-Cursor Support**: [multiple-cursors.nvim](https://github.com/brenton-leighton/multiple-cursors.nvim)
 - **Development Tools**: [live-server.nvim](https://github.com/aurum77/live-server.nvim) for real-time preview
 - **Additional Themes & Plugins**:
   - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim) - A clean, dark Neovim theme
@@ -40,10 +41,16 @@ rename %LOCALAPPDATA%\nvim-data nvim-data.bak
 ```
 2. Clone the repository
 ```bash
-# Linux/macOS
+# Linux/MacOS:
+# remove .git so you can use your own git connection later
+rm -rf ~/.config/nvim/.git
+# Clone the repo
 git clone https://github.com/FatihTheDev/FatihNvim.git ~/.config/nvim
 
-# Windows
+# Windows:
+# remove .git so you can use your own git connection later
+Remove-Item $env:LOCALAPPDATA\nvim\.git -Recurse -Force
+# Clone the repo
 git clone https://github.com/FatihTheDev/FatihNvim.git %LOCALAPPDATA%\nvim
 ```
 3. Start Neovim
@@ -116,7 +123,8 @@ Most colorschemes are managed through lazy.nvim. However, if you want to use the
 - eldrich.nvim
 
 ## 📝 Usage:
-- Use ```<leader>ff``` for file finding
-- Use 's' in normal mode to trigger flash.nvim
-- Access live server features using commands :LiveServerStart and :LiveServerStop
-- Switch themes using :Colorscheme <theme_name>
+- Use ```<leader>ff``` or ```ctrl + f``` for file finding
+- Use ```ctrl + t``` or ``ctrl + alt + t`` for opening a terminal window
+- Use '``s`` in normal mode to trigger flash.nvim
+- Access live server features using commands ```:LiveServerStart``` and ```:LiveServerStop``` in command mode
+- Switch themes using ```:colorscheme <theme_name>``` in command mode

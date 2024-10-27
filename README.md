@@ -20,6 +20,7 @@ This is my personalized fork of [AstroNvim](https://astronvim.com/), enhanced wi
 
 - Neovim >= 0.8.0
 - Git
+- pnpm
 - (Optional) vim-plug if using specific colorschemes
 - A Nerd Font installed and configured in your terminal
 - Terminal with true color support
@@ -42,16 +43,16 @@ rename %LOCALAPPDATA%\nvim-data nvim-data.bak
 2. Clone the repository
 ```bash
 # Linux/MacOS:
-# remove .git so you can use your own git connection later
-rm -rf ~/.config/nvim/.git
 # Clone the repo
 git clone https://github.com/FatihTheDev/FatihNvim.git ~/.config/nvim
+# remove .git so you can use your own git connection later
+rm -rf ~/.config/nvim/.git
 
 # Windows:
-# remove .git so you can use your own git connection later
-Remove-Item $env:LOCALAPPDATA\nvim\.git -Recurse -Force
 # Clone the repo
 git clone https://github.com/FatihTheDev/FatihNvim.git %LOCALAPPDATA%\nvim
+# remove .git so you can use your own git connection later
+Remove-Item $env:LOCALAPPDATA\nvim\.git -Recurse -Force
 ```
 3. Start Neovim
 ```bash

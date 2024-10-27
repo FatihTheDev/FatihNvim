@@ -37,8 +37,8 @@ mv ~/.local/state/nvim ~/.local/state/nvim.bak
 mv ~/.cache/nvim ~/.cache/nvim.bak
 
 # Windows
-rename %LOCALAPPDATA%\nvim nvim.bak
-rename %LOCALAPPDATA%\nvim-data nvim-data.bak
+mv %LOCALAPPDATA%\nvim nvim.bak
+mv %LOCALAPPDATA%\nvim-data nvim-data.bak
 ```
 2. Clone the repository
 ```bash

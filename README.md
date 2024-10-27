@@ -37,8 +37,8 @@ mv ~/.local/state/nvim ~/.local/state/nvim.bak
 mv ~/.cache/nvim ~/.cache/nvim.bak
 
 # Windows
-rename %LOCALAPPDATA%\nvim nvim.bak
-rename %LOCALAPPDATA%\nvim-data nvim-data.bak
+mv %LOCALAPPDATA%\nvim nvim.bak
+mv %LOCALAPPDATA%\nvim-data nvim-data.bak
 ```
 2. Clone the repository
 ```bash
@@ -131,3 +131,15 @@ Most colorschemes are managed through lazy.nvim. However, if you want to use the
 - Switch themes using ```:colorscheme <theme_name>``` in command mode
 
   Note: If you encounter some issues with jsx or tsx autocomplete, run ```:MasonInstall emmet-language-server``` in command mode
+  
+  ##### Preinstalled Mason LSPs:
+  - emmet_language_server
+  - lua_ls
+  - html
+  - cssls
+  - tailwindcss
+  - ts_ls
+  - clangd
+  - pylsp
+  - markdown_oxide
+  - sqlls 

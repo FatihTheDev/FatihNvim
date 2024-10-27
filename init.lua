@@ -138,15 +138,24 @@ local dashboard = require('alpha.themes.dashboard')
 
 -- Footer
 local function footer()
-  local version = vim.version()
-  local print_version = "v" .. version.major .. '.' .. version.minor .. '.' .. version.patch
-  local datetime = os.date('%Y/%m/%d %H:%M:%S')
-
-  return "Made with ❤️  by FatihTheDev." 
+  return "Made with ❤️  by FatihTheDev."
 end
 
 -- Banner
 local banner = {
+"                      ,-,-      ",
+"                     / / |      ",
+"                   _/ / /       ",
+"              _,-' `Z_/         ",
+"            ,-'_,-.    |  _     ",
+"          _(_-'_()|     |' |    ",
+"  ,--_,--'                 |    ",
+" / ''                      L-'/ ",
+" |,--^---v--v-._        /   / | ",
+" |_________________,-'      |   ",
+"                    |           ",
+"                    |           ",
+
    "███████   ████    ████████ ██  ██    ██     ███    ██  ██    ██  ██  ███    ███  ",
    "██      ██    ██     ██    ██  ██    ██     ████   ██  ██    ██  ██  ████  ████    ",
    "█████   ██    ██     ██    ██  ████████     ██ ██  ██  ██    ██  ██  ██ ████ ██    ",

@@ -37,6 +37,9 @@ end
 
 require "lazy_setup"
 require "polish"
+require "flash"
+require "mason"
+require "multiple-cursors"
 
 vim.cmd("set smartcase")
 
@@ -125,20 +128,47 @@ require('vscode').setup({
 -- vim.cmd.colorscheme "vscode"
 
 
+-- Configure alpha.nvim 
+local status_ok, alpha = pcall(require, 'alpha')
+if not status_ok then
+  return
+end
 
--- Customize alpha.nvim
+local dashboard = require('alpha.themes.dashboard')
 
-local status_ok, alpha = pcall(require, "alpha")
-if not status_ok then return end
+-- Footer
+local function footer()
+  local version = vim.version()
+  local print_version = "v" .. version.major .. '.' .. version.minor .. '.' .. version.patch
+  local datetime = os.date('%Y/%m/%d %H:%M:%S')
 
-local dashboard = require("alpha.themes.dashboard")
+  return "Made with ❤️  by FatihTheDev." 
+end
 
-
--- Customize the header section value
-dashboard.section.header.val = {
+-- Banner
+local banner = {
    "███████   ████    ████████ ██  ██    ██     ███    ██  ██    ██  ██  ███    ███  ",
    "██      ██    ██     ██    ██  ██    ██     ████   ██  ██    ██  ██  ████  ████    ",
    "█████   ██    ██     ██    ██  ████████     ██ ██  ██  ██    ██  ██  ██ ████ ██    ",
    "██      ████████     ██    ██  ██    ██     ██  ██ ██   ██  ██   ██  ██  ██  ██     ",
    "██      ██    ██     ██    ██  ██    ██     ██   ████    ████    ██  ██      ██    ",
 }
+
+dashboard.section.header.val = banner
+
+-- Menu
+dashboard.section.buttons.val = {
+  dashboard.button('SPC n', '  New file', ':ene <BAR> startinsert<CR>'),
+  dashboard.button('SPC e', '  Toggle File Explorer', 'Toggle Explorer<CR>'),
+  dashboard.button('SPC ff  or  CTRL f', '  Find file', ':Telescope find_files<CR>'),
+  dashboard.button('SPC fo', '  Recents', 'Find history<CR>'),
+  dashboard.button("SPC f'", '  Find bookmarks', 'Find marks<CR>'), 
+  dashboard.button("SPC fa", '  Find config files', 'Find AstroNvim config files<CR>'),
+  dashboard.button('u', '  Update plugins', ':Lazy update<CR>'),
+  dashboard.button('m', '  Update mason.nvim LSPs', ':MasonUpdate<CR>'),
+  dashboard.button('q', '  Quit', ':qa<CR>'),
+}
+
+dashboard.section.footer.val = footer()
+
+alpha.setup(dashboard.config)

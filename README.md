@@ -130,9 +130,9 @@ Most colorschemes are managed through lazy.nvim. However, if you want to use the
 - Access live server features using commands ```:LiveServerStart``` and ```:LiveServerStop``` in command mode
 - Switch themes using ```:colorscheme <theme_name>``` in command mode
 
-  ##### Note: If you encounter some issues with jsx or tsx autocomplete, run ```:MasonInstall emmet-language-server``` in command mode
+  Note: If you encounter some issues with jsx or tsx autocomplete, run ```:MasonInstall emmet-language-server``` in command mode
   
-  ###### Preinstalled Mason LSPs:
+  ##### Preinstalled Mason LSPs:
   - emmet_language_server
   - lua_ls
   - html

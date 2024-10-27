@@ -20,7 +20,7 @@ This is my personalized fork of [AstroNvim](https://astronvim.com/), enhanced wi
 
 - Neovim >= 0.8.0
 - Git
-- pnpm
+- pnpm (for live-server.nvim)
 - (Optional) vim-plug if using specific colorschemes
 - A Nerd Font installed and configured in your terminal
 - Terminal with true color support

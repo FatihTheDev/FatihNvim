@@ -129,3 +129,5 @@ Most colorschemes are managed through lazy.nvim. However, if you want to use the
 - Use '``s`` in normal mode to trigger flash.nvim
 - Access live server features using commands ```:LiveServerStart``` and ```:LiveServerStop``` in command mode
 - Switch themes using ```:colorscheme <theme_name>``` in command mode
+
+  Note: If you encounter some issues with jsx or tsx autocomplete, run ```:MasonInstall emmet-language-server``` in command mode

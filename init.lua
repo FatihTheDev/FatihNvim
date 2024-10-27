@@ -37,6 +37,7 @@ end
 
 require "lazy_setup"
 require "polish"
+require "tokyonight"
 require "flash"
 require "mason"
 require "multiple-cursors"
@@ -48,7 +49,6 @@ local Plug = vim.fn["plug#"]
 
 vim.call('plug#begin')
 
-Plug('Mofiqul/vscode.nvim')
 Plug('eldritch-theme/eldritch.nvim')
 
 vim.call('plug#end')
@@ -161,9 +161,10 @@ dashboard.section.buttons.val = {
   dashboard.button('SPC n', '  New file', ':ene <BAR> startinsert<CR>'),
   dashboard.button('SPC e', '  Toggle File Explorer', 'Toggle Explorer<CR>'),
   dashboard.button('SPC ff  or  CTRL f', '  Find file', ':Telescope find_files<CR>'),
-  dashboard.button('SPC fo', '  Recents', 'Find history<CR>'),
-  dashboard.button("SPC f'", '  Find bookmarks', 'Find marks<CR>'), 
-  dashboard.button("SPC fa", '  Find config files', 'Find AstroNvim config files<CR>'),
+  dashboard.button('SPC Ss', '  Save current session', 'Save this session<CR>'),
+  dashboard.button('SPC Sf', '  List all saved sessions', 'Load a sessionCR>'),
+  dashboard.button("SPC f'", '  Find bookmarks', 'Find marks<CR>'),
+  dashboard.button("SPC Sf", '  Find sessions', 'Find marks<CR>'),
   dashboard.button('u', '  Update plugins', ':Lazy update<CR>'),
   dashboard.button('m', '  Update mason.nvim LSPs', ':MasonUpdate<CR>'),
   dashboard.button('q', '  Quit', ':qa<CR>'),

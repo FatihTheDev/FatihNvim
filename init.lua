@@ -37,7 +37,6 @@ end
 
 require "lazy_setup"
 require "polish"
-require "tokyonight"
 require "flash"
 require "mason"
 require "multiple-cursors"
@@ -45,20 +44,16 @@ require "multiple-cursors"
 vim.cmd("set smartcase")
 
 
-local Plug = vim.fn["plug#"]
-
-vim.call('plug#begin')
-
-Plug('eldritch-theme/eldritch.nvim')
-
-vim.call('plug#end')
-
-
 -- Colorschemes Usage
 
 vim.cmd[[colorscheme tokyonight-night]]
 
+-- vim.o.background = "dark" -- or "light" for light mode
+-- vim.cmd([[colorscheme gruvbox]])
+
 -- vim.cmd[[colorscheme eldritch]]
+
+vim.cmd("colorscheme kanagawa")
 
 require("aerial").setup({
   -- optionally use on_attach to set keymaps when aerial has attached to a buffer

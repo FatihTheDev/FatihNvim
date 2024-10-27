@@ -17,5 +17,11 @@ return{
     'Mofiqul/vscode.nvim',
     lazy = true,
 
-  }
+  },
+-- Install gruvbox.nvim colorscheme
+  {
+    "ellisonleao/gruvbox.nvim",
+    priority = 1000 ,
+    config = true,
+    opts = ...}
 }

@@ -35,11 +35,12 @@ if not pcall(require, "lazy") then
 end
 
 
-require "lazy_setup"
-require "polish"
-require "flash"
-require "mason"
-require "multiple-cursors"
+require("lazy_setup")
+require("polish")
+require("flash")
+require("mason")
+require("multiple-cursors")
+require("nvim-treesitter")
 
 vim.cmd("set smartcase")
 

@@ -37,10 +37,16 @@ end
 
 require("lazy_setup")
 require("polish")
+require("alpha")
 require("flash")
 require("mason")
 require("multiple-cursors")
 require("nvim-treesitter")
+require("astrocore")
+require("lua.plugins.colorschemes")
+require("lua.plugins.kanagawa_theme")
+require("live-server")
+require("lua.plugins.none-ls")
 
 vim.cmd("set smartcase")
 

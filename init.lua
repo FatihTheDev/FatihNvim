@@ -1,3 +1,4 @@
+
 -- This file simply bootstraps the installation of Lazy.nvim and then calls other files for execution
 
 -- This file doesn't necessarily need to be touched, BE CAUTIOUS editing this file and proceed at your own risk.
@@ -53,14 +54,14 @@ vim.cmd("set smartcase")
 
 -- Colorschemes Usage
 
-vim.cmd[[colorscheme tokyonight-night]]
+-- vim.cmd[[colorscheme tokyonight-night]]
 
 -- vim.o.background = "dark" -- or "light" for light mode
 -- vim.cmd([[colorscheme gruvbox]])
 
 -- vim.cmd[[colorscheme eldritch]]
 
-vim.cmd("colorscheme kanagawa")
+-- vim.cmd("colorscheme kanagawa")
 
 require("aerial").setup({
   -- optionally use on_attach to set keymaps when aerial has attached to a buffer
@@ -123,11 +124,11 @@ require('vscode').setup({
 
 })
 
--- require('vscode').load()
+require('vscode').load()
 
 -- load the theme without affecting devicon colors.
 
--- vim.cmd.colorscheme "vscode"
+vim.cmd.colorscheme "vscode"
 
 
 -- Configure alpha.nvim 
@@ -175,3 +176,4 @@ dashboard.section.buttons.val = {
 dashboard.section.footer.val = footer()
 
 alpha.setup(dashboard.config)
+

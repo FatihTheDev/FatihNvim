@@ -21,7 +21,6 @@ This is my personalized fork of [AstroNvim](https://astronvim.com/), enhanced wi
 - Neovim >= 0.8.0
 - Git
 - pnpm (for live-server.nvim)
-- (Optional) vim-plug if using specific colorschemes
 - A Nerd Font installed and configured in your terminal
 - Terminal with true color support
 - [Node.js](https://nodejs.org/) for live-server functionality
@@ -50,7 +49,7 @@ rm -rf ~/.config/nvim/.git
 
 # Windows:
 # Clone the repo
-git clone https://github.com/FatihTheDev/FatihNvim.git %LOCALAPPDATA%\nvim
+git clone https://github.com/FatihTheDev/FatihNvim.git \AppData\Local\nvim
 # remove .git so you can use your own git connection later
 Remove-Item $env:LOCALAPPDATA\nvim\.git -Recurse -Force
 ```
@@ -58,6 +57,11 @@ Remove-Item $env:LOCALAPPDATA\nvim\.git -Recurse -Force
 ```bash
 nvim
 ```
+4. Run this command in terminal for live server to work:
+```
+npm install -g live-server
+```
+
 The configuration will automatically install all plugins on the first launch.
 
 ## Configuration
@@ -115,11 +119,12 @@ return {
 }
 ```
 Colorschemes:
-Most colorschemes are managed through lazy.nvim. However, if you want to use the vim-plug colorschemes, install [vim-plug](https://github.com/junegunn/vim-plug)
+Most colorschemes are managed through lazy.nvim.
 
 
 ## 🎨 Available Themes:
 - TokyoNight (variants: storm, moon, night, day)
+- Kanagawa
 - vscode.nvim
 - eldrich.nvim
 
@@ -130,7 +135,7 @@ Most colorschemes are managed through lazy.nvim. However, if you want to use the
 - Access live server features using commands ```:LiveServerStart``` and ```:LiveServerStop``` in command mode
 - Switch themes using ```:colorscheme <theme_name>``` in command mode
 
-  Note: If you encounter some issues with jsx or tsx autocomplete, run ```:MasonInstall emmet-language-server``` in command mode
+  **Note**: If you encounter some issues with .jsx or .tsx autocomplete, run ```:MasonInstall emmet-language-server``` in command mode
   
   ##### Preinstalled Mason LSPs:
   - emmet_language_server

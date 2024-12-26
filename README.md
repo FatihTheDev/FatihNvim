@@ -12,6 +12,7 @@ This is my personalized fork of [AstroNvim](https://astronvim.com/), enhanced wi
   - [alpha-nvim](https://github.com/goolord/alpha-nvim) - A fast and fully programmable greeter
   - [flash.nvim](https://github.com/folke/flash.nvim) - Navigate your code with search labels, enhanced character motions
   - [live-server.nvim](https://github.com/aurum77/live-server.nvim) - Live server for web development
+  - [Neoscroll](https://github.com/karb94/neoscroll.nvim) - Plugin for smooth scrolling
   - Other colorschemes(reqire vim-plug):
   - [vscode.nvim](https://github.com/Mofiqul/vscode.nvim) - Neovim/Vim color scheme inspired by Dark+ and Light+ theme in Visual Studio Code
   - [Eldritch.nvim](https://github.com/eldritch-theme/eldritch.nvim) - A theme for the Ancient Ones! (NVIM)
@@ -20,6 +21,7 @@ This is my personalized fork of [AstroNvim](https://astronvim.com/), enhanced wi
 
 - Neovim >= 0.8.0
 - Git
+- Zig
 - pnpm (for live-server.nvim)
 - A Nerd Font installed and configured in your terminal
 - Terminal with true color support

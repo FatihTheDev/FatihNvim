@@ -3,19 +3,19 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = false,
-    opts = {},
+    opts = {}
   },
 -- Install eldritch.nvim colorscheme 
   {
     "eldritch-theme/eldritch.nvim",
     lazy = true,
-    opts = {},
+    opts = {}
   },
 -- Install vscode.nvim colorscheme
   {
     'Mofiqul/vscode.nvim',
     priority = 1000,
-    lazy = true,
+    lazy = true
 
   },
 -- Install gruvbox.nvim colorscheme

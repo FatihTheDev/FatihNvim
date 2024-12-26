@@ -51,9 +51,9 @@ rm -rf ~/.config/nvim/.git
 
 # Windows:
 # Clone the repo
-git clone https://github.com/FatihTheDev/FatihNvim.git \AppData\Local\nvim
+git clone https://github.com/FatihTheDev/FatihNvim.git C:/Users/<Username>/AppData/Local/nvim
 # remove .git so you can use your own git connection later
-Remove-Item $env:LOCALAPPDATA\nvim\.git -Recurse -Force
+Remove-Item  C:/Users/<Username>/AppData/Local/nvim/.git -Recurse -Force
 ```
 3. Start Neovim
 ```bash

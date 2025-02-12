@@ -133,7 +133,7 @@ Most colorschemes are managed through lazy.nvim.
 ## 📝 Usage:
 - Use ```<leader>ff``` or ```ctrl + f``` for file finding
 - Use ```ctrl + t``` or ``ctrl + alt + t`` for opening a terminal window
-- Use '``s`` in normal mode to trigger flash.nvim
+- Use ``s`` in normal mode to trigger flash.nvim
 - Access live server features using commands ```:LiveServerStart``` and ```:LiveServerStop``` in command mode
 - Switch themes using ```:colorscheme <theme_name>``` in command mode
 

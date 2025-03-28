@@ -52,6 +52,18 @@ require("plugins.none-ls")
 
 vim.cmd("set smartcase")
 
+-- directory where swapfiles will be stored (works on Linux, Windows and MacOS)
+local is_windows = vim.loop.os_uname().sysname == "Windows_NT"
+local home = vim.fn.expand("~")  -- Works for both Unix and Windows
+local config_dir = is_windows and home .. "\\AppData\\Local\\nvim" or home .. "/.config/nvim"
+local swapdir = config_dir .. "/swapfiles"
+
+if vim.fn.isdirectory(swapdir) == 0 then
+  vim.fn.mkdir(swapdir, "p")
+end
+
+vim.opt.directory = swapdir
+
 
 -- Colorschemes Usage
 

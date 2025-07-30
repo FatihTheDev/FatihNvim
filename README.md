@@ -20,6 +20,7 @@ This is my personalized fork of [AstroNvim](https://astronvim.com/), enhanced wi
 ## 📋 Prerequisites
 
 - Neovim >= 0.8.0
+- xclip (if using X11) or wl-clipboard (if using Wayland) packages (on Linux for clipboard sync)
 - Git
 - Zig
 - pnpm (for live-server.nvim)

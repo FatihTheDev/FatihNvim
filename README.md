@@ -59,7 +59,7 @@ git clone https://github.com/FatihTheDev/FatihNvim.git C:/Users/<Username>/AppDa
 # remove .git so you can use your own git connection later
 Remove-Item  C:/Users/<Username>/AppData/Local/nvim/.git -Recurse -Force
 ```
-3. Run these commands in terminal for some linters and formatters to work, as well as live-server(for HTML):
+3. Run these commands in terminal for some linters and formatters to work, as well as live-server (for HTML):
 ```
 npm install -g live-server
 pip install black sqlfluff 'python-lsp-server[all]'

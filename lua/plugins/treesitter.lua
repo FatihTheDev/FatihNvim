@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- Customize Treesitter
 
 ---@type LazySpec
@@ -9,7 +7,62 @@ return {
     ensure_installed = {
       "lua",
       "vim",
+      "html",
+      "css",
+      "scss",
+      "java",
+      "javascript",
+      "typescript",
+      "tsx",
+      "json",
+      "markdown",
+      "markdown_inline",
+      "python",
+      "c",
+      "cpp",
+      "sql",
+      -- "c_sharp",
+      -- "php",
+      -- "phpdoc",
+      -- "go",
+      -- "htmldjango",
+      -- "solidity",
+      -- "haskell",
+      -- "kotlin",
+      -- "vue",
+      -- "svelte",
+      -- "objc",  -- Objective C 
+      -- "ruby",
+      -- "swift",
+      -- "yaml",
+      -- "zig",
+      -- "rust",
+      -- "latex",
+      -- "matlab",
+      -- "pascal",
+      -- "prolog",
+      -- "perl",
+      -- "nginx",
+      -- "nix",
+      -- "csv",
+      -- "cuda",
+      -- "clojure",
+      -- "cmake",
+      -- "dart",
+      -- "dockerfile",
+      -- "elixir",
+      -- "erlang",
+      -- "fsharp",
+      -- "gpg"
       -- add more arguments for adding more treesitter parsers
+    },
+    auto_install = true,
+    highlight = {
+      enable = true,
+      additional_vim_regex_highlighting = false,
+    },
+    indent = {
+      enable = true,
     },
   },
 }

@@ -1,4 +1,4 @@
--- Customize Treesitter
+-- Customize Treesitter (Syntax Highlighting)
 
 ---@type LazySpec
 return {

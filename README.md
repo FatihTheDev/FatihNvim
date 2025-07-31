@@ -25,7 +25,7 @@ This is my personalized fork of [AstroNvim](https://astronvim.com/), enhanced wi
 - [Node.js](https://nodejs.org/)
 - [pnpm](https://pnpm.io/installation) (for live-server.nvim)
 - [Python](https://www.python.org/) (preinstalled on most Linux distributions)
-- pip (for black, sqlfluff and other formatters and linters)
+- [pip](https://pypi.org/project/pip/) (for black, sqlfluff and other formatters and linters)
 - [JDK](https://www.oracle.com/java/technologies/downloads/) (for Java support and Java formatters and linters)
 - zig (on Windows)
 - Terminal with true color support

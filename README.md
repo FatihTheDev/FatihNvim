@@ -20,12 +20,16 @@ This is my personalized fork of [AstroNvim](https://astronvim.com/), enhanced wi
 ## 📋 Prerequisites
 
 - Neovim >= 0.8.0
-- Git
-- Zig
-- pnpm (for live-server.nvim)
-- A Nerd Font installed and configured in your terminal
+- git
+- A [Nerd Font](https://www.nerdfonts.com/font-downloads) installed and configured in your terminal
+- [Node.js](https://nodejs.org/)
+- [pnpm](https://pnpm.io/installation) (for live-server.nvim)
+- [Python](https://www.python.org/) (preinstalled on most Linux distributions)
+- pip (for black, sqlfluff and other formatters and linters)
+- [JDK](https://www.oracle.com/java/technologies/downloads/) (for Java support and Java formatters and linters)
+- zig (on Windows)
 - Terminal with true color support
-- [Node.js](https://nodejs.org/) for live-server functionality
+
 
 ## 🚀 Installation
 
@@ -59,9 +63,13 @@ Remove-Item  C:/Users/<Username>/AppData/Local/nvim/.git -Recurse -Force
 ```bash
 nvim
 ```
-4. Run this command in terminal for live server to work:
+4. Run these commands in terminal for some linters and formatters to work, as well as live-server(for HTML):
 ```
 npm install -g live-server
+pip install black sqlfluff 'python-lsp-server[all]'
+# On Linux, pip will throw an error, so before the above command, run these 2 commands:
+python3 -m venv ~/.venvs/nvim-lsp
+source ~/.venvs/nvim-lsp/bin/activate
 ```
 
 The configuration will automatically install all plugins on the first launch.

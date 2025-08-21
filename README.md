@@ -21,6 +21,7 @@ This is my personalized fork of [AstroNvim](https://astronvim.com/), enhanced wi
 
 - Neovim >= 0.8.0
 - git
+- unzip (for installing some LSP plugins on Linux)
 - A [Nerd Font](https://www.nerdfonts.com/font-downloads) installed and configured in your terminal
 - [Node.js](https://nodejs.org/)
 - [pnpm](https://pnpm.io/installation) (for live-server.nvim)

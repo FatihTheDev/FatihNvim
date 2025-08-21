@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- Customize Mason plugins
 
 ---@type LazySpec
@@ -22,21 +20,22 @@ return {
         "sqlls",
         -- add more arguments for adding more language servers
       },
+      automatic_installation = true,
     },
   },
   -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
-  {
-    "jay-babu/mason-null-ls.nvim",
-    -- overrides `require("mason-null-ls").setup(...)`
-    opts = {
-      ensure_installed = {
-        "stylua",
-        "eslint_d",
-        "ast_grep"
-        -- add more arguments for adding more null-ls sources
-      },
-    },
-  },
+  -- {
+  --   "jay-babu/mason-null-ls.nvim",
+  --   -- overrides `require("mason-null-ls").setup(...)`
+  --   opts = {
+  --     ensure_installed = {
+  --       "stylua",
+  --       "eslint_d",
+  --       "ast_grep"
+  --       -- add more arguments for adding more null-ls sources
+  --     },
+  --   },
+  -- },
   {
     "jay-babu/mason-nvim-dap.nvim",
     -- overrides `require("mason-nvim-dap").setup(...)`
@@ -47,6 +46,7 @@ return {
         "python",
         -- add more arguments for adding more debuggers
       },
+      automatic_installation = true,
     },
   },
 }

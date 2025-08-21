@@ -48,7 +48,10 @@ require("plugins.colorschemes")
 require("plugins.kanagawa_theme")
 require("plugins.neoscroll")
 require("live-server")
-require("plugins.none-ls")
+require("plugins.formatting_and_linting")
+require("plugins.tailwind-tools")
+require("plugins.nvim-tetris")
+
 
 vim.cmd("set smartcase")
 

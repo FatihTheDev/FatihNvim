@@ -7,6 +7,7 @@ This is my personalized fork of [AstroNvim](https://astronvim.com/), enhanced wi
 - **Enhanced Motion**: [flash.nvim](https://github.com/folke/flash.nvim) for quick navigation
 - **Multi-Cursor Support**: [multiple-cursors.nvim](https://github.com/brenton-leighton/multiple-cursors.nvim)
 - **Development Tools**: [live-server.nvim](https://github.com/aurum77/live-server.nvim) for real-time preview
+- **Tetris**: [nvim-tetris](https://github.com/alec-gibson/nvim-tetris)
 - **Additional Themes & Plugins**:
   - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim) - A clean, dark Neovim theme
   - [alpha-nvim](https://github.com/goolord/alpha-nvim) - A fast and fully programmable greeter
@@ -20,13 +21,22 @@ This is my personalized fork of [AstroNvim](https://astronvim.com/), enhanced wi
 ## 📋 Prerequisites
 
 - Neovim >= 0.8.0
+- git
+- unzip (for installing some LSP plugins on Linux)
+- A [Nerd Font](https://www.nerdfonts.com/font-downloads) installed and configured in your terminal
+- [Node.js](https://nodejs.org/)
+- [pnpm](https://pnpm.io/installation) (for live-server.nvim)
+- [Python](https://www.python.org/) (preinstalled on most Linux distributions)
+- [pip](https://pypi.org/project/pip/) (for black, sqlfluff and other formatters and linters)
+- [JDK](https://www.oracle.com/java/technologies/downloads/) (for Java support and Java formatters and linters)
+- zig (on Windows)
 - xclip (if using X11) or wl-clipboard (if using Wayland) packages (on Linux for clipboard sync)
 - Git
 - Zig
 - pnpm (for live-server.nvim)
 - A Nerd Font installed and configured in your terminal
 - Terminal with true color support
-- [Node.js](https://nodejs.org/) for live-server functionality
+
 
 ## 🚀 Installation
 
@@ -56,15 +66,18 @@ git clone https://github.com/FatihTheDev/FatihNvim.git C:/Users/<Username>/AppDa
 # remove .git so you can use your own git connection later
 Remove-Item  C:/Users/<Username>/AppData/Local/nvim/.git -Recurse -Force
 ```
-3. Start Neovim
+3. Run these commands in terminal for some linters and formatters to work, as well as live-server (for HTML):
+```
+npm install -g live-server
+pip install black sqlfluff 'python-lsp-server[all]'
+# On Linux, pip will throw an error, so before the above command, run these 2 commands:
+python3 -m venv ~/.venvs/nvim-lsp
+source ~/.venvs/nvim-lsp/bin/activate
+```
+4. Start Neovim
 ```bash
 nvim
 ```
-4. Run this command in terminal for live server to work:
-```
-npm install -g live-server
-```
-
 The configuration will automatically install all plugins on the first launch.
 
 ## Configuration
@@ -129,7 +142,7 @@ Most colorschemes are managed through lazy.nvim.
 - TokyoNight (variants: storm, moon, night, day)
 - Kanagawa
 - vscode.nvim
-- eldrich.nvim
+- eldrich.nvim...
 
 ## 📝 Usage:
 - Use ```<leader>ff``` or ```ctrl + f``` for file finding
@@ -137,6 +150,7 @@ Most colorschemes are managed through lazy.nvim.
 - Use ``s`` in normal mode to trigger flash.nvim
 - Access live server features using commands ```:LiveServerStart``` and ```:LiveServerStop``` in command mode
 - Switch themes using ```:colorscheme <theme_name>``` in command mode
+- To start playing tetris, run ```:Tetris```, and to quit, run ```:q```.
 
   **Note**: If you encounter some issues with .jsx or .tsx autocomplete, run ```:MasonInstall emmet-language-server``` in command mode
   

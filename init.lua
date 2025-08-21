@@ -50,6 +50,7 @@ require("plugins.neoscroll")
 require("live-server")
 require("plugins.formatting_and_linting")
 require("plugins.tailwind-tools")
+require("plugins.nvim-tetris")
 
 
 vim.cmd("set smartcase")

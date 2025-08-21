@@ -30,6 +30,11 @@ This is my personalized fork of [AstroNvim](https://astronvim.com/), enhanced wi
 - [pip](https://pypi.org/project/pip/) (for black, sqlfluff and other formatters and linters)
 - [JDK](https://www.oracle.com/java/technologies/downloads/) (for Java support and Java formatters and linters)
 - zig (on Windows)
+- xclip (if using X11) or wl-clipboard (if using Wayland) packages (on Linux for clipboard sync)
+- Git
+- Zig
+- pnpm (for live-server.nvim)
+- A Nerd Font installed and configured in your terminal
 - Terminal with true color support
 
 

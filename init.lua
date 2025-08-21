@@ -157,7 +157,7 @@ local dashboard = require('alpha.themes.dashboard')
 
 -- Footer
 local function footer()
-  return "Made with ❤️  by FatihTheDev."
+  return "Made with ❤️ by FatihTheDev."
 end
 
 -- Banner

@@ -7,6 +7,7 @@ This is my personalized fork of [AstroNvim](https://astronvim.com/), enhanced wi
 - **Enhanced Motion**: [flash.nvim](https://github.com/folke/flash.nvim) for quick navigation
 - **Multi-Cursor Support**: [multiple-cursors.nvim](https://github.com/brenton-leighton/multiple-cursors.nvim)
 - **Development Tools**: [live-server.nvim](https://github.com/aurum77/live-server.nvim) for real-time preview
+- **Tetris**: [nvim-tetris](https://github.com/alec-gibson/nvim-tetris)
 - **Additional Themes & Plugins**:
   - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim) - A clean, dark Neovim theme
   - [alpha-nvim](https://github.com/goolord/alpha-nvim) - A fast and fully programmable greeter
@@ -29,6 +30,11 @@ This is my personalized fork of [AstroNvim](https://astronvim.com/), enhanced wi
 - [pip](https://pypi.org/project/pip/) (for black, sqlfluff and other formatters and linters)
 - [JDK](https://www.oracle.com/java/technologies/downloads/) (for Java support and Java formatters and linters)
 - zig (on Windows)
+- xclip (if using X11) or wl-clipboard (if using Wayland) packages (on Linux for clipboard sync)
+- Git
+- Zig
+- pnpm (for live-server.nvim)
+- A Nerd Font installed and configured in your terminal
 - Terminal with true color support
 
 
@@ -136,7 +142,7 @@ Most colorschemes are managed through lazy.nvim.
 - TokyoNight (variants: storm, moon, night, day)
 - Kanagawa
 - vscode.nvim
-- eldrich.nvim
+- eldrich.nvim...
 
 ## 📝 Usage:
 - Use ```<leader>ff``` or ```ctrl + f``` for file finding
@@ -144,6 +150,7 @@ Most colorschemes are managed through lazy.nvim.
 - Use ``s`` in normal mode to trigger flash.nvim
 - Access live server features using commands ```:LiveServerStart``` and ```:LiveServerStop``` in command mode
 - Switch themes using ```:colorscheme <theme_name>``` in command mode
+- To start playing tetris, run ```:Tetris```, and to quit, run ```:q```.
 
   **Note**: If you encounter some issues with .jsx or .tsx autocomplete, run ```:MasonInstall emmet-language-server``` in command mode
   

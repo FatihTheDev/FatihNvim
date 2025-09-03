@@ -51,6 +51,7 @@ require("live-server")
 require("plugins.formatting_and_linting")
 require("plugins.tailwind-tools")
 require("plugins.nvim-tetris")
+require("plugins.undotree")
 
 
 vim.cmd("set smartcase")
@@ -91,14 +92,17 @@ require("aerial").setup({
 vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
 
 
--- Keybindings
-vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>") -- space + a = toggle aerial(to show all variables and functions in code)
-vim.keymap.set("n", "<C-A-a>", "<cmd>AerialToggle!<CR>") -- ctrl + alt + a = toggle aerial(to show all variables and functions in code)
+-- Keybindings (keyboard shortcuts)
+-- vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>") -- space + a = toggle aerial(to show all variables and functions in code)
+-- vim.keymap.set("n", "<C-A-a>", "<cmd>AerialToggle!<CR>") -- ctrl + alt + a = toggle aerial(to show all variables and functions in code)
 
 vim.keymap.set("n", "<C-A-t>", "<cmd>:ToggleTerm<CR>") -- ctrl + alt + t = toggle terminal
 vim.keymap.set("n", "<C-t>", "<cmd>:ToggleTerm<CR>") -- ctrl + t = toggle terminal
 
 vim.keymap.set("n", "<C-f>", "<cmd>:Telescope fd<CR>") -- ctrl + f = open Telescope(fuzzy finder)
+
+vim.keymap.set("n", "<leader>a", "<cmd>:UndotreeToggle<CR>") -- space + a = toggle undotree
+vim.keymap.set("n", "<C-A-a>", "<cmd>:UndotreeToggle<CR>") -- ctrl + alt + a = toggle undotree
 
 
 

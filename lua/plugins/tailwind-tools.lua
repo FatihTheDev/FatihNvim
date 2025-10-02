@@ -9,5 +9,12 @@ return {
     "nvim-telescope/telescope.nvim", -- optional
     "neovim/nvim-lspconfig", -- optional
   },
-  opts = {} -- your configuration
+  opts = {
+    color = {
+      enabled = true,
+    },
+    conceal = {
+      enabled = false,
+    },
+  },
 }

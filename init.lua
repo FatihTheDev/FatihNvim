@@ -56,6 +56,14 @@ require("plugins.undotree")
 
 vim.cmd("set smartcase")
 
+-- Make background transparent
+vim.opt.termguicolors = true
+vim.cmd [[
+    autocmd VimEnter * highlight Normal guibg=NONE ctermbg=NONE
+    autocmd VimEnter * highlight NonText guibg=NONE ctermbg=NONE
+    autocmd VimEnter * highlight SignColumn guibg=NONE ctermbg=NONE
+]]
+
 -- directory where swapfiles will be stored (works on Linux, Windows and MacOS)
 local is_windows = vim.loop.os_uname().sysname == "Windows_NT"
 local home = vim.fn.expand("~")  -- Works for both Unix and Windows

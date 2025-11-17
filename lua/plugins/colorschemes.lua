@@ -8,7 +8,7 @@ return {
 -- Install eldritch.nvim colorscheme 
   {
     "eldritch-theme/eldritch.nvim",
-    lazy = true,
+    lazy = false,
     opts = {}
   },
 -- Install vscode.nvim colorscheme
@@ -21,8 +21,9 @@ return {
 -- Install gruvbox.nvim colorscheme
   {
     "ellisonleao/gruvbox.nvim",
+    lazy=false,
     config = true,
     opts = {}
-}
+  }
 }
 

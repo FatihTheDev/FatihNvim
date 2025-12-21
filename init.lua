@@ -108,6 +108,7 @@ vim.keymap.set("n", "<C-A-t>", "<cmd>:ToggleTerm<CR>") -- ctrl + alt + t = toggl
 vim.keymap.set("n", "<C-t>", "<cmd>:ToggleTerm<CR>") -- ctrl + t = toggle terminal
 
 vim.keymap.set("n", "<C-f>", "<cmd>:Telescope fd<CR>") -- ctrl + f = open Telescope(fuzzy finder)
+vim.keymap.set("n", "<C-g>", "<cmd>Telescope live_grep<CR>") -- ctrl + f = open Telescope(fuzzy finder)
 
 vim.keymap.set("n", "<leader>a", "<cmd>:UndotreeToggle<CR>") -- space + a = toggle undotree
 vim.keymap.set("n", "<C-A-a>", "<cmd>:UndotreeToggle<CR>") -- ctrl + alt + a = toggle undotree

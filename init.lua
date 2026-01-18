@@ -47,7 +47,7 @@ require("astrocore")
 require("plugins.colorschemes")
 require("plugins.kanagawa_theme")
 require("plugins.neoscroll")
-require("live-server")
+require("plugins.live-server")
 require("plugins.formatting_and_linting")
 require("plugins.tailwind-tools")
 require("plugins.nvim-tetris")
@@ -55,6 +55,14 @@ require("plugins.undotree")
 
 
 vim.cmd("set smartcase")
+
+-- Make background transparent
+vim.opt.termguicolors = true
+vim.cmd [[
+    autocmd VimEnter * highlight Normal guibg=NONE ctermbg=NONE
+    autocmd VimEnter * highlight NonText guibg=NONE ctermbg=NONE
+    autocmd VimEnter * highlight SignColumn guibg=NONE ctermbg=NONE
+]]
 
 -- directory where swapfiles will be stored (works on Linux, Windows and MacOS)
 local is_windows = vim.loop.os_uname().sysname == "Windows_NT"
@@ -100,6 +108,7 @@ vim.keymap.set("n", "<C-A-t>", "<cmd>:ToggleTerm<CR>") -- ctrl + alt + t = toggl
 vim.keymap.set("n", "<C-t>", "<cmd>:ToggleTerm<CR>") -- ctrl + t = toggle terminal
 
 vim.keymap.set("n", "<C-f>", "<cmd>:Telescope fd<CR>") -- ctrl + f = open Telescope(fuzzy finder)
+vim.keymap.set("n", "<C-g>", "<cmd>Telescope live_grep<CR>") -- ctrl + f = open Telescope(fuzzy finder)
 
 vim.keymap.set("n", "<leader>a", "<cmd>:UndotreeToggle<CR>") -- space + a = toggle undotree
 vim.keymap.set("n", "<C-A-a>", "<cmd>:UndotreeToggle<CR>") -- ctrl + alt + a = toggle undotree
@@ -181,17 +190,18 @@ dashboard.section.header.val = banner
 
 -- Menu
 dashboard.section.buttons.val = {
-  dashboard.button('SPC n', '  New file', ':ene <BAR> startinsert<CR>'),
-  dashboard.button('SPC e', '  Toggle File Explorer', 'Toggle Explorer<CR>'),
-  dashboard.button('SPC ff  or  CTRL f', '  Find file', ':Telescope find_files<CR>'),
-  dashboard.button('SPC Ss', '  Save current session', 'Save this session<CR>'),
-  dashboard.button('SPC Sf', '  List all saved sessions', 'Load a sessionCR>'),
-  dashboard.button("SPC f'", '  Find bookmarks', 'Find marks<CR>'),
-  dashboard.button("SPC Sf", '  Find sessions', 'Find marks<CR>'),
-  dashboard.button('u', '  Update plugins', ':Lazy update<CR>'),
-  dashboard.button('m', '  Update mason.nvim LSPs', ':MasonUpdate<CR>'),
-  dashboard.button('q', '  Quit', ':qa<CR>'),
+  dashboard.button('SPC n',              '  New file',                    ':ene <BAR> startinsert<CR>'),
+  dashboard.button('SPC e',              '  Toggle File Explorer',        ':Toggle Explorer<CR>'),
+  dashboard.button('SPC ff  or  CTRL f', '  Find file',                   ':Telescope find_files<CR>'),
+  dashboard.button('CTRL g',             '  Live grep',                   ':Telescope live_grep<CR>'),
+  dashboard.button('SPC Ss',             '  Save current session',        ':SaveSession<CR>'),
+  dashboard.button('SPC Sf',             '  List all saved sessions',     ':ListSessions<CR>'),
+  dashboard.button("SPC f'",             '✪  Find bookmarks',              ':Telescope marks<CR>'),
+  dashboard.button('u',                  '  Update plugins',              ':Lazy update<CR>'),
+  dashboard.button('m',                  '  Update Mason LSPs',           ':MasonUpdate<CR>'),
+  dashboard.button('q',                  '  Quit',                        ':qa<CR>'),
 }
+
 
 dashboard.section.footer.val = footer()
 

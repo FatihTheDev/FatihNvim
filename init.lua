@@ -190,17 +190,18 @@ dashboard.section.header.val = banner
 
 -- Menu
 dashboard.section.buttons.val = {
-  dashboard.button('SPC n', '  New file', ':ene <BAR> startinsert<CR>'),
-  dashboard.button('SPC e', '  Toggle File Explorer', 'Toggle Explorer<CR>'),
-  dashboard.button('SPC ff  or  CTRL f', '  Find file', ':Telescope find_files<CR>'),
-  dashboard.button('SPC Ss', '  Save current session', 'Save this session<CR>'),
-  dashboard.button('SPC Sf', '  List all saved sessions', 'Load a sessionCR>'),
-  dashboard.button("SPC f'", '  Find bookmarks', 'Find marks<CR>'),
-  dashboard.button("SPC Sf", '  Find sessions', 'Find marks<CR>'),
-  dashboard.button('u', '  Update plugins', ':Lazy update<CR>'),
-  dashboard.button('m', '  Update mason.nvim LSPs', ':MasonUpdate<CR>'),
-  dashboard.button('q', '  Quit', ':qa<CR>'),
+  dashboard.button('SPC n',              '  New file',                    ':ene <BAR> startinsert<CR>'),
+  dashboard.button('SPC e',              '  Toggle File Explorer',        ':Toggle Explorer<CR>'),
+  dashboard.button('SPC ff  or  CTRL f', '  Find file',                   ':Telescope find_files<CR>'),
+  dashboard.button('CTRL g',             '  Live grep',                   ':Telescope live_grep<CR>'),
+  dashboard.button('SPC Ss',             '  Save current session',        ':SaveSession<CR>'),
+  dashboard.button('SPC Sf',             '  List all saved sessions',     ':ListSessions<CR>'),
+  dashboard.button("SPC f'",             '✪  Find bookmarks',              ':Telescope marks<CR>'),
+  dashboard.button('u',                  '  Update plugins',              ':Lazy update<CR>'),
+  dashboard.button('m',                  '  Update Mason LSPs',           ':MasonUpdate<CR>'),
+  dashboard.button('q',                  '  Quit',                        ':qa<CR>'),
 }
+
 
 dashboard.section.footer.val = footer()
 

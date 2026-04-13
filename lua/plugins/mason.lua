@@ -16,8 +16,7 @@ return {
         "ts_ls",
         "clangd",
         "pylsp",
-        "markdown_oxide",
-        "sqlls",
+        "markdown_oxide"
         -- add more arguments for adding more language servers
       },
       automatic_installation = true,

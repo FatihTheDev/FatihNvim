@@ -1,8 +1,8 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  branch = "main",
+  branch = "master",
   event = "VeryLazy",
-  lazy = vim.fn.argc(-1) == 0, -- load treesitter immediately when opening a file from the cmdline
+  lazy = vim.fn.argc(-1) == 0,
   cmd = { "TSInstall", "TSInstallFromGrammar", "TSUninstall", "TSUpdate", "TSLog" },
   build = ":TSUpdate",
   opts = {},

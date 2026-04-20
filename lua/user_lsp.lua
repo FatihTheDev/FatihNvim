@@ -11,8 +11,10 @@ local function on_attach(client, bufnr)
   buf_set_keymap("n", "gD", vim.lsp.buf.declaration, opts)
   buf_set_keymap("n", "gd", vim.lsp.buf.definition, opts)
   buf_set_keymap("n", "K", vim.lsp.buf.hover, opts)
+  buf_set_keymap("i", "<C-k>", vim.lsp.buf.signature_help, opts)
   buf_set_keymap("n", "gi", vim.lsp.buf.implementation, opts)
-  buf_set_keymap("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+  buf_set_keymap("i", "<C-s>", vim.lsp.buf.signature_help, opts)
+  buf_set_keymap("n", "<C-s>", vim.lsp.buf.signature_help, opts)
   buf_set_keymap("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, opts)
   buf_set_keymap("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, opts)
   buf_set_keymap("n", "<leader>wl", function()
@@ -39,7 +41,7 @@ local function on_attach(client, bufnr)
   end
 
   if client.supports_method("textDocument/inlayHint") then
-    vim.lsp.inlay_hint.enable(bufnr, true)
+    pcall(vim.lsp.inlay_hint.enable, bufnr, true)
   end
 end
 
@@ -110,6 +112,19 @@ require("mason-lspconfig").setup({
       lspconfig[server_name].setup(opts)
     end,
   },
+})
+
+-- Auto-start LSP for C/C++ files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "c", "cpp", "objc" },
+  callback = function(args)
+    local lsp = require("lspconfig")
+    local clangd_opts = vim.tbl_deep_extend("force", {
+      on_attach = on_attach,
+      capabilities = capabilities(),
+    }, servers.clangd or {})
+    lsp.clangd.setup(clangd_opts)
+  end,
 })
 
 vim.diagnostic.config({

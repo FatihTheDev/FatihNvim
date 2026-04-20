@@ -37,19 +37,7 @@ end
 
 require("lazy_setup")
 require("polish")
-require("alpha")
-require("flash")
-require("mason")
-require("multiple-cursors")
-require("astrocore")
-require("plugins.colorschemes")
-require("plugins.kanagawa_theme")
-require("plugins.neoscroll")
-require("plugins.live-server")
-require("plugins.formatting_and_linting")
-require("plugins.tailwind-tools")
-require("plugins.nvim-tetris")
-require("plugins.undotree")
+require("keymaps")
 
 
 vim.cmd("set smartcase")
@@ -111,6 +99,7 @@ vim.keymap.set("n", "<C-g>", "<cmd>Telescope live_grep<CR>") -- ctrl + f = open 
 vim.keymap.set("n", "<leader>a", "<cmd>:UndotreeToggle<CR>") -- space + a = toggle undotree
 vim.keymap.set("n", "<C-A-a>", "<cmd>:UndotreeToggle<CR>") -- ctrl + alt + a = toggle undotree
 
+vim.keymap.set("n", "<C-s>", "<cmd>:write<CR>") -- save file
 
 
 local c = require('vscode.colors').get_colors()
